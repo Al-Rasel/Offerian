@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.bynotech.offerian.view.MobileVerification">
+
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/appbarLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+            app:popupTheme="@style/AppTheme.PopupOverlay" />
+
+    </android.support.design.widget.AppBarLayout>
+
+    <android.support.design.widget.TextInputLayout
+
+        android:id="@+id/mVerification"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:layout_below="@id/appbarLayout"
+        android:layout_marginTop="24dp"
+        android:textColorHint="#9c9c9c">
+
+        <AutoCompleteTextView
+
+            android:id="@+id/et_password"
+            android:layout_width="match_parent"
+
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"
+            android:backgroundTint="@color/colorAccent"
+            android:clickable="true"
+            android:drawablePadding="8dp"
+            android:focusableInTouchMode="true"
+            android:hint="Mobile​ Number ​Verification Code"
+            android:imeOptions="actionNext"
+            android:inputType="textPassword"
+            android:maxLines="1"
+            android:text="012345"
+
+            android:textColor="#242739"
+            android:textColorHint="#9c9c9c"
+            android:textSize="15sp" />
+
+    </android.support.design.widget.TextInputLayout>
+
+
+    <Button
+        android:layout_width="300dp"
+        android:layout_height="55dp"
+        android:layout_below="@+id/mVerification"
+        android:layout_centerInParent="true"
+        android:layout_gravity="center"
+        android:layout_marginTop="16dp"
+        android:backgroundTint="@color/colorAccent"
+        android:gravity="center"
+        android:onClick="otpCheckNetworkCall"
+        android:text="Submit"
+        android:textAllCaps="false"
+
+        android:textColor="#fff"
+        android:textSize="18sp" />
+
+    <ProgressBar
+        android:id="@+id/progressbarOtp"
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        android:visibility="gone"
+        android:layout_centerInParent="true" />
+
+</RelativeLayout>

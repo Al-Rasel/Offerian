@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Offerian</string>
+    <string name="title_activity_sign_up">SignUpActivity</string>
+    <string name="title_activity_mobile_verification">MobileVerification</string>
+    <string name="title_activity_home">HomeActivity</string>
+    <string name="title_activity_sign_in_actiivty">SignInActiivty</string>
+</resources>
