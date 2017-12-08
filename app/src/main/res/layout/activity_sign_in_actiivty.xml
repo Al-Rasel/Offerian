@@ -47,6 +47,7 @@
                 android:drawablePadding="8dp"
                 android:focusableInTouchMode="true"
                 android:hint="Mobile Number"
+                android:inputType="number"
 
 
                 android:maxLines="1"

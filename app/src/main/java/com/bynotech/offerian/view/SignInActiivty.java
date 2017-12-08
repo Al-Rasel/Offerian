@@ -12,6 +12,7 @@ import android.support.v7.widget.Toolbar;
 import android.telephony.TelephonyManager;
 import android.text.TextUtils;
 import android.util.DisplayMetrics;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.ProgressBar;
@@ -110,7 +111,7 @@ public class SignInActiivty extends AppCompatActivity {
                 @Override
                 public void onResponse(Call<SignUpPayLoad> call, Response<SignUpPayLoad> response) {
                     if (response.isSuccessful()) {
-                        Toast.makeText(SignInActiivty.this, String.valueOf(response.body().getStatus()), Toast.LENGTH_SHORT).show();
+                        Toast.makeText(SignInActiivty.this, String.valueOf(response.body().getSession_id()), Toast.LENGTH_SHORT).show();
                     }
                 }
 
@@ -202,5 +203,19 @@ public class SignInActiivty extends AppCompatActivity {
         }
     }
 
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        // Handle action bar item clicks here. The action bar will
+        // automatically handle clicks on the Home/Up button, so long
+        // as you specify a parent activity in AndroidManifest.xml.
+        int id = item.getItemId();
 
+        if (id == android.R.id.home) {
+
+            finish();
+            return true;
+        }
+
+        return super.onOptionsItemSelected(item);
+    }
 }

@@ -36,7 +36,7 @@ public interface UserAuthRetrofitInterface {
     Call<DemoOtpPayLoad> demoOtpCheck(@Body DemoOtpCheck demoOtpCheck);
 
 
-    @POST("api/apps/login ")
+    @POST("api/apps/login")
     Call<SignUpPayLoad> userSignInNetworkCall(@Body UserSignInRequestBody signupRequestBody);
 
 }
